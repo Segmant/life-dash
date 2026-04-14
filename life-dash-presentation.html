@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Dash — Ad Creative Presentation</title>
+  <style>
+    @font-face {
+      font-family: 'Manrope';
+      src: url('fonts/Manrope-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Manrope';
+      src: url('fonts/Manrope-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #0f1923;
+      color: #fff;
+    }
+
+    /* ── SLIDE BASE ── */
+    .slide {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 100px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ── COVER ── */
+    .cover {
+      background: #2973cb;
+    }
+    .cover .logo {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cover .logo-dot {
+      width: 7px; height: 7px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .cover h1 {
+      font-size: clamp(42px, 5vw, 72px);
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+    .cover .subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      line-height: 1.6;
+    }
+    .cover .date {
+      position: absolute;
+      bottom: 48px;
+      right: 100px;
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .divider {
+      background: #0f1923;
+      min-height: 30vh;
+      padding: 60px 100px;
+      justify-content: flex-end;
+    }
+    .divider .idea-num {
+      font-size: 120px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      position: absolute;
+      right: 80px;
+      bottom: 20px;
+    }
+    .divider .tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #2973cb;
+      margin-bottom: 12px;
+    }
+    .divider h2 {
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      max-width: 600px;
+      margin-bottom: 12px;
+    }
+    .divider p {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.45);
+      max-width: 440px;
+    }
+
+    /* ── PATH SLIDE ── */
+    .path-slide {
+      background: #141e2b;
+    }
+    .path-slide .path-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 36px;
+    }
+    .path-slide .path-tag span {
+      color: #2973cb;
+    }
+    .path-slide .headline {
+      font-size: clamp(28px, 3.2vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+    .path-slide .concept {
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .meta-row {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .meta-block .meta-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      margin-bottom: 8px;
+    }
+    .meta-block .meta-value {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+    .meta-block .cta-pill {
+      display: inline-block;
+      padding: 7px 16px;
+      background: #2973cb;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .path-slide .video-note {
+      position: absolute;
+      bottom: 48px;
+      right: 100px;
+      max-width: 340px;
+      text-align: right;
+    }
+    .path-slide .video-note .vn-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+      margin-bottom: 5px;
+    }
+    .path-slide .video-note p {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.55;
+    }
+
+    /* ── PRODUCTION NOTES ── */
+    .notes-slide {
+      background: #0f1923;
+    }
+    .notes-slide h3 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 40px;
+    }
+    .notes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .notes-col h4 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2973cb;
+      margin-bottom: 16px;
+    }
+    .notes-col ul {
+      list-style: none;
+      padding: 0;
+    }
+    .notes-col ul li {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .notes-col ul li:last-child { border-bottom: none; }
+
+    /* ── NAV DOTS ── */
+    .nav {
+      position: fixed;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+    .nav a {
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav a:hover { background: #fff; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#cover"></a>
+  <a href="#idea1"></a>
+  <a href="#1a"></a>
+  <a href="#1b"></a>
+  <a href="#1c"></a>
+  <a href="#idea2"></a>
+  <a href="#2a"></a>
+  <a href="#2b"></a>
+  <a href="#2c"></a>
+  <a href="#idea3"></a>
+  <a href="#3a"></a>
+  <a href="#3b"></a>
+  <a href="#3c"></a>
+  <a href="#notes"></a>
+</nav>
+
+<!-- ══════════════ COVER ══════════════ -->
+<section class="slide cover" id="cover">
+  <div class="logo"><span class="logo-dot"></span> Life Dash</div>
+  <h1>Ad Creative<br>Campaign Ideas</h1>
+  <p class="subtitle">3 campaign ideas · 9 creative paths · Meta stills rolling to video</p>
+  <div class="date">April 2026</div>
+</section>
+
+<!-- ══════════════ IDEA 1 DIVIDER ══════════════ -->
+<section class="slide divider" id="idea1">
+  <div class="tag">Idea 01</div>
+  <h2>Medication &amp; Lab Results</h2>
+  <p>No condition framing. Data Made Visible. Problem → Solution arc targeting anyone managing ongoing prescriptions and bloodwork.</p>
+  <div class="idea-num">01</div>
+</section>
+
+<!-- 1A -->
+<section class="slide path-slide" id="1a">
+  <div class="path-tag">Idea 01 · <span>Path A — Data Made Visible</span></div>
+  <div class="headline">"You've been collecting data for years.<br>You just couldn't see it."</div>
+  <div class="concept">Split-frame still. Left: paper prescriptions and lab PDFs, slightly out of focus. Right: clean Life Dash line graph connecting them. No faces.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">See Your Data Free</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">Your Medications. Your Lab Results. One View.</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 15s</div>
+    <p>Hands sorting papers → phone animates into a graph → person exhales with visible relief. No voiceover.</p>
+  </div>
+</section>
+
+<!-- 1B -->
+<section class="slide path-slide" id="1b">
+  <div class="path-tag">Idea 01 · <span>Path B — Organised Life</span></div>
+  <div class="headline">"Morning ritual.<br>Missing piece."</div>
+  <div class="concept">Flat lay, top-down. Kitchen counter: coffee, pills in a weekly organiser, phone open to Life Dash. Warm domestic light. Promotes agency — you already have the routine.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">Start Free Today</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">Your Morning Pills, Finally in Context</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 10–15s</div>
+    <p>Time-lapse morning routine → end card: "You already have the data. Now use it."</p>
+  </div>
+</section>
+
+<!-- 1C -->
+<section class="slide path-slide" id="1c">
+  <div class="path-tag">Idea 01 · <span>Path C — Paper Chaos / Dashboard Clarity</span></div>
+  <div class="headline">"Same information.<br>That you can actually use."</div>
+  <div class="concept">Before/after diptych. Left: printouts, sticky notes, prescription bag. Right: the same data as a clean Life Dash graph. Same hands in both frames.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">Use It Free</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">From Paper Records to Clear Graphs</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 6–15s</div>
+    <p>Papers scanned → dissolve into animated graph lines. ASMR-adjacent. Works as 6s bumper or 15s story.</p>
+  </div>
+</section>
+
+<!-- ══════════════ IDEA 2 DIVIDER ══════════════ -->
+<section class="slide divider" id="idea2">
+  <div class="tag">Idea 02</div>
+  <h2>The GLP-1 Generation</h2>
+  <p>Medication-as-hero. No condition naming. Long-term metabolic story — the 6-month journey beyond the scale.</p>
+  <div class="idea-num">02</div>
+</section>
+
+<!-- 2A -->
+<section class="slide path-slide" id="2a">
+  <div class="path-tag">Idea 02 · <span>Path A — Six-Month Diptych</span></div>
+  <div class="headline">"Same medication.<br>Different picture."</div>
+  <div class="concept">Two dashboard frames side by side. Week 1: sparse data. Week 24: rich, populated graphs with visible metabolic trends. No faces — the data tells the story.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">Start Tracking Your Journey</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">See What GLP-1 Is Doing to Your Bloodwork</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 10s</div>
+    <p>Graph lines build week by week → full dashboard → "The scale only shows 15% of the story."</p>
+  </div>
+</section>
+
+<!-- 2B -->
+<section class="slide path-slide" id="2b">
+  <div class="path-tag">Idea 02 · <span>Path B — Clinical Confidence</span></div>
+  <div class="headline">"Bring your own data<br>to the appointment."</div>
+  <div class="concept">Patient sits across from doctor, showing their data on their phone. Shot from behind patient's shoulder. The power dynamic is reversed — the patient leads.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">Own Your Appointment</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">Show Your Doctor Your Data Trends</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 20s</div>
+    <p>Walk into clinic → phone out → doctor leans in → VO: "You've been on it 6 months. Now you can show what happened."</p>
+  </div>
+</section>
+
+<!-- 2C -->
+<section class="slide path-slide" id="2c">
+  <div class="path-tag">Idea 02 · <span>Path C — Metabolic Map</span></div>
+  <div class="headline">"Visualise<br>what GLP-1 is doing."</div>
+  <div class="concept">Close-up multi-line graph: weight, HbA1c, cholesterol, liver enzymes. One marker dips — another follows weeks later. The visual is self-explanatory.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">Map Your Metabolic Journey</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">Cholesterol, HbA1c, and GLP-1 — One View</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 15s</div>
+    <p>Markers light up one by one → "Most people only track weight. This is everything else."</p>
+  </div>
+</section>
+
+<!-- ══════════════ IDEA 3 DIVIDER ══════════════ -->
+<section class="slide divider" id="idea3">
+  <div class="tag">Idea 03</div>
+  <h2>Cholesterol Treadmill</h2>
+  <p>Enemy: the false reassurance of taking a pill without ever knowing if it's working. Demo-forward. Ages 45–65.</p>
+  <div class="idea-num">03</div>
+</section>
+
+<!-- 3A -->
+<section class="slide path-slide" id="3a">
+  <div class="path-tag">Idea 03 · <span>Path A — Family Stakes</span></div>
+  <div class="headline">"Is it working?"</div>
+  <div class="concept">Man in his late 50s at a kitchen table, phone showing a 2-year cholesterol graph. Family photo blurred in the background. Warm morning light — the quiet weight of knowing.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">See Your Trend Free</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">Is Your Statin Actually Working?</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 20s</div>
+    <p>Slow push-in → graph populates → downward trend → exhale. "You've been doing the right thing. Now see the proof."</p>
+  </div>
+</section>
+
+<!-- 3B -->
+<section class="slide path-slide" id="3b">
+  <div class="path-tag">Idea 03 · <span>Path B — Heart and Data</span></div>
+  <div class="headline">"It's what's next<br>that's important."</div>
+  <div class="concept">Cholesterol printout with LDL 187 highlighted. Overlaid: a Life Dash graph showing the 18-month downward trend from that number. The printout is the past. The graph is the story.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">Start Your Timeline</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">Visualise Your Cholesterol Over Time</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 15s</div>
+    <p>Printout → app opens → single data point → 18-month fast-forward → trend emerges. "One number is not a story. This is."</p>
+  </div>
+</section>
+
+<!-- 3C -->
+<section class="slide path-slide" id="3c">
+  <div class="path-tag">Idea 03 · <span>Path C — Annual Moment</span></div>
+  <div class="headline">"No waiting<br>to know."</div>
+  <div class="concept">Doctor's waiting room. Patient compares new lab results to her Life Dash graph on her phone. She already knows. The appointment is confirmation, not discovery.</div>
+  <div class="meta-row">
+    <div class="meta-block">
+      <div class="meta-label">Primary CTA</div>
+      <div class="meta-value"><span class="cta-pill">Know Before Your Next Appointment</span></div>
+    </div>
+    <div class="meta-block">
+      <div class="meta-label">Google Headline</div>
+      <div class="meta-value">Know Your Numbers Before Your Doctor Does</div>
+    </div>
+  </div>
+  <div class="video-note">
+    <div class="vn-label">Video · 20s</div>
+    <p>Waiting room → doctor enters with results → patient nods, phone in hand → doctor smiles. "She'd been watching it for a year."</p>
+  </div>
+</section>
+
+<!-- ══════════════ PRODUCTION NOTES ══════════════ -->
+<section class="slide notes-slide" id="notes">
+  <h3>Production Notes</h3>
+  <div class="notes-grid">
+    <div class="notes-col">
+      <h4>Stills → Video Rules</h4>
+      <ul>
+        <li>Diptych: animate with dissolve, wipe, or data-populate</li>
+        <li>Graph close-up: build line by line on screen</li>
+        <li>Flat lay: timelapse or slow push-in</li>
+        <li>Person + phone: add micro-reaction (relief, quiet nod)</li>
+        <li>Paper chaos: physical-to-digital morph</li>
+      </ul>
+    </div>
+    <div class="notes-col">
+      <h4>Casting</h4>
+      <ul>
+        <li>Ages 35–65</li>
+        <li>No model-perfect bodies</li>
+        <li>No fitness-aspirational framing</li>
+        <li>Maximum demographic diversity across all 9 executions</li>
+      </ul>
+    </div>
+    <div class="notes-col">
+      <h4>Compliance</h4>
+      <ul>
+        <li>Do not name conditions in GLP-1 ads (Meta policy)</li>
+        <li>Lead with whole-health language, not disease framing</li>
+        <li>No before/after body images in GLP-1 paths</li>
+        <li>All CTAs lead with "Free" — no hidden cost signals</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
