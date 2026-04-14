@@ -245,6 +245,105 @@
     }
     .notes-col ul li:last-child { border-bottom: none; }
 
+    /* ── TEXT & GRAPHIC SECTION ── */
+    .tg-divider {
+      background: #2973cb;
+      min-height: 30vh;
+      padding: 60px 100px;
+      justify-content: flex-end;
+    }
+    .tg-divider .tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 12px;
+    }
+    .tg-divider h2 {
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      max-width: 600px;
+      margin-bottom: 12px;
+    }
+    .tg-divider p {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+    }
+
+    .tg-slide {
+      background: #0f1923;
+      padding: 80px 100px;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    .tg-slide .tg-section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #2973cb;
+      margin-bottom: 40px;
+    }
+    .tg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .tg-card {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .tg-card .tg-path {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+    }
+    .tg-card .tg-source {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.55;
+      font-style: italic;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .tg-card .tg-sweeps {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .tg-card .tg-sweep {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+    }
+    .tg-card .tg-sweep strong {
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+    }
+    .tg-card .tg-headline {
+      font-size: clamp(20px, 2vw, 26px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #fff;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
     /* ── NAV DOTS ── */
     .nav {
       position: fixed;
@@ -285,6 +384,10 @@
   <a href="#3b"></a>
   <a href="#3c"></a>
   <a href="#notes"></a>
+  <a href="#tg-intro"></a>
+  <a href="#tg1"></a>
+  <a href="#tg2"></a>
+  <a href="#tg3"></a>
 </nav>
 
 <!-- ══════════════ COVER ══════════════ -->
@@ -540,6 +643,128 @@
         <li>All CTAs lead with "Free" — no hidden cost signals</li>
       </ul>
     </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ TEXT & GRAPHIC DIVIDER ══════════════ -->
+<section class="slide tg-divider" id="tg-intro">
+  <div class="tag">Text &amp; Graphic Executions</div>
+  <h2>Headlines refined through Ogilvy + Seven Sweeps</h2>
+  <p>Each headline distilled from a longer source line using Clarity, Specificity, and Emotion sweeps. Built to work without photography.</p>
+</section>
+
+<!-- TG IDEA 1 -->
+<section class="slide tg-slide" id="tg1">
+  <div class="tg-section-label">Idea 01 — Medication &amp; Lab Results</div>
+  <div class="tg-grid">
+
+    <div class="tg-card">
+      <div class="tg-path">Path A · Data Made Visible</div>
+      <div class="tg-source">"See if your medication is actually working. Free on Life Dash."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Clarity:</strong> Strip to the core question</div>
+        <div class="tg-sweep"><strong>Emotion:</strong> Relief, not curiosity — the reader wants an answer they've never had</div>
+      </div>
+      <div class="tg-headline">See If It's Working</div>
+    </div>
+
+    <div class="tg-card">
+      <div class="tg-path">Path B · Organised Life</div>
+      <div class="tg-source">"Life Dash connects your medications to your lab results."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Clarity:</strong> "Connects" is the verb doing the work</div>
+        <div class="tg-sweep"><strong>Specificity:</strong> Pills and results are the two concrete things — name both</div>
+      </div>
+      <div class="tg-headline">Your Medication.<br>Your Results. Connected.</div>
+    </div>
+
+    <div class="tg-card">
+      <div class="tg-path">Path C · Paper Chaos</div>
+      <div class="tg-source">"Life Dash turns six patient portals into one dashboard."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Clarity:</strong> "Six portals" is the specific pain — keep it</div>
+        <div class="tg-sweep"><strong>Specificity:</strong> The number six is doing real work</div>
+      </div>
+      <div class="tg-headline">Six Portals.<br>One Dashboard. Free.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TG IDEA 2 -->
+<section class="slide tg-slide" id="tg2">
+  <div class="tg-section-label">Idea 02 — The GLP-1 Generation</div>
+  <div class="tg-grid">
+
+    <div class="tg-card">
+      <div class="tg-path">Path A · Six-Month Diptych</div>
+      <div class="tg-source">"What changed beyond the number on the scale."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>So What:</strong> The reader on GLP-1 wants to know what else shifted</div>
+        <div class="tg-sweep"><strong>Emotion:</strong> "Beyond" carries aspiration without clinical framing</div>
+      </div>
+      <div class="tg-headline">Beyond The Scale</div>
+    </div>
+
+    <div class="tg-card">
+      <div class="tg-path">Path B · Clinical Confidence</div>
+      <div class="tg-source">"Walk into your next appointment already knowing."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Clarity:</strong> "Already knowing" is the entire promise in two words</div>
+        <div class="tg-sweep"><strong>Emotion:</strong> Confidence, not anxiety — that contrast is the feeling</div>
+      </div>
+      <div class="tg-headline">Walk In Already Knowing</div>
+    </div>
+
+    <div class="tg-card">
+      <div class="tg-path">Path C · Metabolic Map</div>
+      <div class="tg-source">"Life Dash tracks what GLP-1 is doing to your cholesterol, blood sugar, and liver markers."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Clarity:</strong> Compress to the unanswered question the reader already has</div>
+        <div class="tg-sweep"><strong>So What:</strong> The answer to this question is the entire product promise</div>
+      </div>
+      <div class="tg-headline">What Is GLP-1 Doing?</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TG IDEA 3 -->
+<section class="slide tg-slide" id="tg3">
+  <div class="tg-section-label">Idea 03 — Cholesterol Treadmill</div>
+  <div class="tg-grid">
+
+    <div class="tg-card">
+      <div class="tg-path">Path A · Family Stakes</div>
+      <div class="tg-source">"Life Dash shows you three years of results in one graph."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Specificity:</strong> "Three years" is the concrete detail that proves the claim</div>
+        <div class="tg-sweep"><strong>Emotion:</strong> Seeing proof of effort — that's the payoff</div>
+      </div>
+      <div class="tg-headline">Three Years.<br>One Graph.</div>
+    </div>
+
+    <div class="tg-card">
+      <div class="tg-path">Path B · Heart and Data</div>
+      <div class="tg-source">"The trend your cholesterol results have been building for 18 months."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Specificity:</strong> "18 months" stays — specific and believable</div>
+        <div class="tg-sweep"><strong>So What:</strong> The trend is what the reader never got to see</div>
+      </div>
+      <div class="tg-headline">18 Months Of Truth</div>
+    </div>
+
+    <div class="tg-card">
+      <div class="tg-path">Path C · Annual Moment</div>
+      <div class="tg-source">"You already know before the appointment."</div>
+      <div class="tg-sweeps">
+        <div class="tg-sweep"><strong>Clarity:</strong> The No/Know pun earns its place — it stops the read</div>
+        <div class="tg-sweep"><strong>Emotion:</strong> Quiet confidence, not urgency</div>
+      </div>
+      <div class="tg-headline">No Waiting To Know</div>
+    </div>
+
   </div>
 </section>
 
