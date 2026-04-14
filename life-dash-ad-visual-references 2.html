@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Dash — Ad Visual References</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #1a1a2e;
+      padding: 48px 40px;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin: 52px 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 400px);
+      gap: 24px;
+    }
+
+    .path-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.25);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    /* ── AD CARD — 1:1 square ── */
+    .ad {
+      width: 400px;
+      height: 400px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: #2973cb;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── SHARED ELEMENTS ── */
+    .logo-mark {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo-dot {
+      width: 7px;
+      height: 7px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 8px;
+    }
+
+    .headline {
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .subline {
+      font-size: 11.5px;
+      font-weight: 400;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 8px 18px;
+      background: #fff;
+      color: #2973cb;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      text-decoration: none;
+    }
+
+    /* ── LAYOUT 1: copy top / image bottom-right ── */
+    .l-top-right .inner {
+      padding: 28px 28px 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .l-top-right .spacer { flex: 1; }
+
+    .l-top-right .img-wrap {
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 62%;
+      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.3));
+    }
+
+    .l-top-right .img-wrap img { width: 100%; display: block; }
+
+    /* ── LAYOUT 2: copy bottom / image top-center ── */
+    .l-img-top {
+      justify-content: flex-end;
+    }
+
+    .l-img-top .img-wrap {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-height: 54%;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .l-img-top .img-wrap img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .l-img-top .copy-block {
+      padding: 20px 28px 26px;
+      background: linear-gradient(to top, rgba(41,115,203,1) 70%, rgba(41,115,203,0));
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── LAYOUT 3: copy left / image right ── */
+    .l-split {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .l-split .copy-block {
+      padding: 28px 20px 28px 28px;
+      flex: 0 0 52%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .l-split .img-wrap {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 16px 20px 0;
+    }
+
+    .l-split .img-wrap img {
+      width: 100%;
+      border-radius: 12px;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+    }
+
+    /* ── LAYOUT 4: full bleed centered ── */
+    .l-center {
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px;
+    }
+
+    .l-center .img-wrap {
+      width: 80%;
+      margin: 0 auto;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+    }
+
+    .l-center .img-wrap img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .l-center .copy-block {
+      width: 100%;
+    }
+
+    /* ── LAYOUT 5: large headline + small image ── */
+    .l-headline-hero {
+      padding: 28px;
+      justify-content: space-between;
+    }
+
+    .l-headline-hero .headline {
+      font-size: 44px;
+    }
+
+    .l-headline-hero .img-wrap {
+      position: absolute;
+      bottom: 60px;
+      right: 20px;
+      width: 44%;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.3));
+      opacity: 0.9;
+    }
+
+    .l-headline-hero .img-wrap img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .l-headline-hero .bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    /* subtle noise/depth overlay on all cards */
+    .ad::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0.08) 100%);
+      pointer-events: none;
+      border-radius: 16px;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Life Dash · Ad Visual References</h1>
+<p style="font-size:12px;color:rgba(255,255,255,0.25);margin-bottom:4px;">9 concepts · 1:1 Facebook format · #2973cb</p>
+
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-label">Idea 1 — Medication &amp; Lab Results</div>
+<div class="grid">
+
+  <!-- 1A: See If It's Working -->
+  <div>
+    <div class="path-label">Path A · Data Made Visible</div>
+    <div class="ad l-top-right">
+      <div class="inner">
+        <div class="logo-mark" style="margin-bottom:20px;"><div class="logo-dot"></div>Life Dash</div>
+        <div class="eyebrow">Your medications</div>
+        <div class="headline">See If It's<br>Working</div>
+        <div class="subline" style="max-width:55%;">Connect your meds and lab results. See the trend.</div>
+        <div class="spacer"></div>
+        <div style="margin-bottom:28px;"><a class="cta" href="#">See Your Data</a></div>
+      </div>
+      <div class="img-wrap">
+        <img src="images/6932e44233349a2aff73f4ba_Frame 1597881864.avif" alt="LDL graph">
+      </div>
+    </div>
+  </div>
+
+  <!-- 1B: Your Pills. Your Results. Connected. -->
+  <div>
+    <div class="path-label">Path B · Organised Life</div>
+    <div class="ad l-img-top">
+      <div class="img-wrap">
+        <img src="images/69313f9fd74fde90be6a327a_Group 1000006436.avif" alt="Life Dash on phone">
+      </div>
+      <div class="copy-block">
+        <div class="eyebrow">Your morning routine</div>
+        <div class="headline" style="font-size:28px;">Your Pills.<br>Your Results.<br>Connected.</div>
+        <div class="subline">One free dashboard. Nothing to download.</div>
+        <a class="cta" href="#">Complete Your Routine</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1C: Six Portals. One Dashboard. Free. -->
+  <div>
+    <div class="path-label">Path C · Paper Chaos</div>
+    <div class="ad l-split">
+      <div class="copy-block">
+        <div>
+          <div class="logo-mark" style="margin-bottom:20px;"><div class="logo-dot"></div>Life Dash</div>
+          <div class="eyebrow">Stop the chaos</div>
+          <div class="headline" style="font-size:26px;">Six Portals.<br>One Dashboard.<br>Free.</div>
+          <div class="subline">Your records. One place. You own it.</div>
+        </div>
+        <a class="cta" href="#">Clear The Chaos</a>
+      </div>
+      <div class="img-wrap">
+        <img src="images/692dab046eb30c34ad379c35_tablet LD-artguru.png" alt="Life Dash dashboard">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-label">Idea 2 — The GLP-1 Generation</div>
+<div class="grid">
+
+  <!-- 2A: Beyond The Scale -->
+  <div>
+    <div class="path-label">Path A · Six-Month Diptych</div>
+    <div class="ad l-headline-hero">
+      <div>
+        <div class="logo-mark" style="margin-bottom:20px;"><div class="logo-dot"></div>Life Dash</div>
+        <div class="eyebrow">GLP-1 tracking</div>
+        <div class="headline" style="font-size:52px;max-width:55%;">Beyond<br>The<br>Scale</div>
+      </div>
+      <div class="img-wrap">
+        <img src="images/6932e44233349a2aff73f4ba_Frame 1597881864.avif" alt="Metabolic graph">
+      </div>
+      <div class="bottom-row">
+        <div class="subline" style="margin-bottom:0;max-width:55%;">See what your medication is doing to your bloodwork. Free.</div>
+        <a class="cta" href="#">See The Full Story</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2B: Walk In Already Knowing -->
+  <div>
+    <div class="path-label">Path B · Clinical Confidence</div>
+    <div class="ad l-img-top">
+      <div class="img-wrap">
+        <img src="images/69313f9fd74fde90be6a327a_Group 1000006436.avif" alt="Life Dash on phone">
+      </div>
+      <div class="copy-block">
+        <div class="eyebrow">Your appointment</div>
+        <div class="headline" style="font-size:28px;">Walk In<br>Already Knowing</div>
+        <div class="subline">Your labs. Your meds. Your data. Free.</div>
+        <a class="cta" href="#">Own Your Appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2C: What Is GLP-1 Doing? -->
+  <div>
+    <div class="path-label">Path C · Metabolic Map</div>
+    <div class="ad l-top-right">
+      <div class="inner">
+        <div class="logo-mark" style="margin-bottom:20px;"><div class="logo-dot"></div>Life Dash</div>
+        <div class="eyebrow">Metabolic tracking</div>
+        <div class="headline">What Is<br>GLP-1<br>Doing?</div>
+        <div class="subline" style="max-width:55%;">Track cholesterol, HbA1c, and liver markers. Free.</div>
+        <div class="spacer"></div>
+        <div style="margin-bottom:28px;"><a class="cta" href="#">Map Your Markers</a></div>
+      </div>
+      <div class="img-wrap">
+        <img src="images/6932e44233349a2aff73f4ba_Frame 1597881864.avif" alt="Metabolic graph">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-label">Idea 3 — Cholesterol Treadmill</div>
+<div class="grid">
+
+  <!-- 3A: Three Years. One Graph. -->
+  <div>
+    <div class="path-label">Path A · Family Stakes</div>
+    <div class="ad l-split">
+      <div class="copy-block">
+        <div>
+          <div class="logo-mark" style="margin-bottom:20px;"><div class="logo-dot"></div>Life Dash</div>
+          <div class="eyebrow">Statin tracking</div>
+          <div class="headline" style="font-size:30px;">Three Years.<br>One Graph.</div>
+          <div class="subline">See if your medication is working. Free.</div>
+        </div>
+        <a class="cta" href="#">See If It's Working</a>
+      </div>
+      <div class="img-wrap">
+        <img src="images/692dab046eb30c34ad379c35_tablet LD-artguru.png" alt="Life Dash dashboard">
+      </div>
+    </div>
+  </div>
+
+  <!-- 3B: 18 Months Of Truth -->
+  <div>
+    <div class="path-label">Path B · Heart and Data</div>
+    <div class="ad l-headline-hero">
+      <div>
+        <div class="logo-mark" style="margin-bottom:20px;"><div class="logo-dot"></div>Life Dash</div>
+        <div class="eyebrow">Your cholesterol trend</div>
+        <div class="headline" style="font-size:46px;max-width:55%;">18 Months<br>Of Truth</div>
+      </div>
+      <div class="img-wrap">
+        <img src="images/6932e44233349a2aff73f4ba_Frame 1597881864.avif" alt="Cholesterol graph">
+      </div>
+      <div class="bottom-row">
+        <div class="subline" style="margin-bottom:0;max-width:55%;">One number isn't a story. Life Dash shows the trend.</div>
+        <a class="cta" href="#">Start Your Timeline</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3C: No Waiting To Know -->
+  <div>
+    <div class="path-label">Path C · Annual Moment</div>
+    <div class="ad l-img-top">
+      <div class="img-wrap">
+        <img src="images/69313f9fd74fde90be6a327a_Group 1000006436.avif" alt="Life Dash on phone">
+      </div>
+      <div class="copy-block">
+        <div class="eyebrow">Annual results</div>
+        <div class="headline" style="font-size:28px;">No Waiting<br>To Know</div>
+        <div class="subline">Track your results year over year. Free on Life Dash.</div>
+        <a class="cta" href="#">Know Before You Go</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p style="font-size:11px;color:rgba(255,255,255,0.2);margin-top:48px;padding-bottom:48px;">Life Dash Ad Visual References · April 2026 · 1:1 Facebook format · #2973cb</p>
+
+</body>
+</html>
